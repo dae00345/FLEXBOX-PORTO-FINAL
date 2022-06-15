@@ -12,7 +12,6 @@ p{
     text-align: justify;
 }
 hr{
-    display: none;
 }
 /* ------- HEADER ------- */
 header{
@@ -60,13 +59,33 @@ nav a:hover{
 nav a:active{
     color: red;
 }
+/* WRAPPER */
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+/* SIDEBAR CONTACT */
+.sidebar{
+    padding: 20px;
+    width:20%;
+    color: white;
+    position:fixed;
+    right: 3%;
+    top: 20%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #27282c;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 15px;
+}
 /* MAIN CONTAINER (CONTENT)*/
 .main-container{
     display:flex;
     flex-flow:column nowrap;
     row-gap: 40px;
-    max-width:1200px;
-    margin: 100px auto 50px auto;
+    max-width:70%;
+    margin: 100px auto auto 20px;
 }
 /* CONTAINER SATU */
 .container-satu{
@@ -117,15 +136,23 @@ aside{
     text-align: center;
     opacity: 0;
 }
+#gallery{
+    opacity:100%;
+    font-size: 2em;
+    color: white;
+}
 /* GALLERY */
 .container-tiga{
     margin: 50px auto;
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
     padding: 20px;
     border-radius:10px;
+}
+.service h3, .service p{
+    text-align:center;
 }
 /* IMAGE WRAPPER */
 .img{
@@ -166,7 +193,31 @@ button:hover{
     cursor: pointer;
     letter-spacing: 0.25em;
 }
-/* KEYFRAMES ANIMATION */
+/* CONTACT IMG */
+.contact-img-wrapper{
+    display:flex;
+    justify-content:space-between;
+    column-gap: 5px;
+}
+.contact-img{
+    width:50px;
+    height:50px;
+}
+.contact-img:hover{
+    animation: contact-img-animation 0.5s forwards;
+}
+.contact-img:active{
+    filter: grayscale(100%);
+}
+/* -------------------KEYFRAMES ANIMATION DEKSTOP------------------- */
+@keyframes contact-img-animation{
+    0%{
+
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
 @keyframes service-animation{
     0%{
 
@@ -192,11 +243,15 @@ button:hover{
         transform:scale(1.2) rotate(360deg);
     }
 }
-/* RESPONSIVE BREAKPOINT */
+/* ---------------------RESPONSIVE BREAKPOINT--------------------- */
 @media(max-width:600px){
     /* lOGO */
     header{
         flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .header-logo{
+        display: none;
     }
     /* CONTAINER SATU */
     .container-satu{
@@ -215,9 +270,34 @@ button:hover{
     }
     /* CONTAINER DUA (SERVICE) */
     .container-tiga{
+        display: flex;
         justify-content: center;
+        background-color: #27282c;
+        border: 1px solid white;
+    /* WRAPPER */
     }
-    /* KEYFRAME MOBILE */
+    .wrapper{
+        display: block;
+        width:100%;
+    }
+    /* CONTACT */
+    .sidebar{
+        margin: auto;
+        width: 80%;
+        position: static;
+        margin-bottom: 15px;
+    }
+    .main-container{
+        width:100%;
+        margin: 80px auto 20px auto;
+    }
+    /* IMG */
+    .img{
+        width:100px;
+        height:100px;
+    }
+    
+    /* -------------------KEYFRAME MOBILE------------------- */
     @keyframes service-animation{
         0%{
     
