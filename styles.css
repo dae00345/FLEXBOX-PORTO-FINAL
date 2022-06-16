@@ -245,11 +245,21 @@ button:hover{
     }
 }
 /* ---------------------RESPONSIVE BREAKPOINT--------------------- */
-@media(max-width:800px){
+@media(max-width:820px){
     /* lOGO */
     header{
         flex-direction: row-reverse;
+        flex-wrap: wrap;
         justify-content: center;
+    }
+    nav ul{
+        gap: 17px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    nav a{
+        border: solid white 1px;
     }
     .header-logo{
         display: none;
@@ -269,11 +279,12 @@ button:hover{
     }
     .service{
         width: 100%;
+        row-gap: 15px;
     }
     /* CONTAINER DUA (SERVICE) */
     .container-tiga{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         background-color: #27282c;
         border: 1px solid white;
     /* WRAPPER */
