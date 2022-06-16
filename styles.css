@@ -135,9 +135,8 @@ aside{
 }
 .center-text{
     text-align: center;
-    opacity: 0;
 }
-#gallery{
+#gallery, .center-text{
     opacity:100%;
     font-size: 2em;
     color: white;
@@ -246,7 +245,7 @@ button:hover{
     }
 }
 /* ---------------------RESPONSIVE BREAKPOINT--------------------- */
-@media(max-width:600px){
+@media(max-width:800px){
     /* lOGO */
     header{
         flex-direction: row-reverse;
@@ -260,6 +259,7 @@ button:hover{
         display: flex;
         flex-flow:column nowrap;
         row-gap: 20px;
+        border:none;
     }
     /* CONTAINER DUA (SERVICE) */
     .container-dua{
@@ -292,7 +292,7 @@ button:hover{
     }
     .main-container{
         max-width:90%;
-        margin: 80px auto 20px auto;
+        margin: 5% auto 20px auto;
     }
     /* IMG */
     .img{
