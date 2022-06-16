@@ -13,10 +13,10 @@
         <div class="logo header-logo">ED</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#service-title">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a onclick="changeColor()" class="contact-click" href="#contact">Contact</a></li>
+                <li><a onclick ="hideContact(), changePositionToCenter()" href="#">Home</a></li>
+                <li><a onclick ="hideContact(), changePositionToCenter()" href="#service-title">Services</a></li>
+                <li><a onclick ="hideContact(), changePositionToCenter()" href="#gallery">Gallery</a></li>
+                <li><a onclick="changeColor(), changePosition()" class="contact-click" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -107,9 +107,9 @@
             <address>No Hp  : 082141353483 </address>
             <address>Alamat : Jl.Eltari,Kota Mbay, Kab. Nagekeo Prov. NTT. Pulau Flores</address>
             <div class="contact-img-wrapper">
-                <a href="#"><img src="aset/instagram.png" alt="" class="contact-img"></a>
-                <a href="#"><img src="aset/social-network.png" alt="" class="contact-img"></a>
-                <a href="#"><img src="aset/youtube.png" alt="" class="contact-img"></a>
+                <a href="https://www.instagram.com/erick_dae/" target="_blank"><img src="aset/instagram.png" alt="" class="contact-img"></a>
+                <a href="https://web.facebook.com/erick.dae.581" target="_blank"><img src="aset/social-network.png" alt="" class="contact-img"></a>
+                <a href="https://www.youtube.com/channel/UCK4z4MLPmCQpKBoS5DQP4mQ/featured" target="_blank"><img src="aset/youtube.png" alt="" class="contact-img"></a>
 
             </div>
         </div>
@@ -122,9 +122,20 @@
     </footer>
 
     <script>
+        let contactBG = document.querySelector("#contact");
+        let mainCont = document.querySelector(".main-container")
         function changeColor(){
-            let contactBG = document.querySelector("#contact");
             contactBG.style.border = "white 2px solid";
+            contactBG.style.display ="flex";
+        }
+        function hideContact(){
+            contactBG.style.display="none";
+        }
+        function changePosition(){
+            mainCont.style.margin = "100px auto auto 20px";
+        }
+        function changePositionToCenter(){
+            mainCont.style.margin = "100px auto auto auto";
         }
     </script>
 </body>

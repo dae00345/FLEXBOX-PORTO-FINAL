@@ -6,7 +6,7 @@
     /* border: 1px dashed greenyellow; */
 }
 body{
-    background-color:rgb(47, 22, 22);
+    background-color:rgb(83, 77, 77);
 }
 p{
     text-align: justify;
@@ -75,7 +75,7 @@ nav a:active{
     text-align: center;
     border-radius: 20px;
     background-color: #27282c;
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
     row-gap: 15px;
 }
@@ -85,7 +85,7 @@ nav a:active{
     flex-flow:column nowrap;
     row-gap: 40px;
     max-width:70%;
-    margin: 100px auto auto 20px;
+    margin: 100px auto auto auto;
 }
 /* CONTAINER SATU */
 .container-satu{
@@ -105,7 +105,8 @@ nav a:active{
     row-gap: 10px;
 }
 aside{
-    background-image: url(aset/header.png);
+    /* background-image: url(aset/header.png); */
+    background-color: black;
     flex: 1;
     display:flex;
     flex-flow: column nowrap;
@@ -188,6 +189,7 @@ button{
     letter-spacing: 0.1em;
     padding: 10px 30px;
     transition: 0.5s;
+    margin-top: 10px;
 }
 button:hover{
     cursor: pointer;
@@ -271,14 +273,15 @@ button:hover{
     /* CONTAINER DUA (SERVICE) */
     .container-tiga{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         background-color: #27282c;
         border: 1px solid white;
     /* WRAPPER */
     }
     .wrapper{
-        display: block;
+        display: flex;
         width:100%;
+        flex-flow: column nowrap;
     }
     /* CONTACT */
     .sidebar{
@@ -288,13 +291,13 @@ button:hover{
         margin-bottom: 15px;
     }
     .main-container{
-        width:100%;
+        max-width:90%;
         margin: 80px auto 20px auto;
     }
     /* IMG */
     .img{
-        width:100px;
-        height:100px;
+        width:150px;
+        height:150px;
     }
     
     /* -------------------KEYFRAME MOBILE------------------- */
